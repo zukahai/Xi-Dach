@@ -37,9 +37,12 @@ class calculator {
         if (count > 0)
             this.AAA[count - 1].forEach(a => {
                 let value = sum + a;
+                if (ans < 16 || ans > 21)
+                    ans = value;
                 if (value > ans && value >= 16 && value <= 21)
                     ans = value;
             });
+        console.log(sum, ' ', count);
         return ans;
     }
 }
